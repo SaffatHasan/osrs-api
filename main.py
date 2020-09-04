@@ -11,4 +11,6 @@ def main():
 if __name__ == "__main__":
     while True:
         main()
-        time.sleep(300)
+        num_mins = 15
+        num_sec = num_mins * 60
+        time.sleep(num_sec)
