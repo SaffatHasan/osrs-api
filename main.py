@@ -1,12 +1,12 @@
-from temple_api import TempleOSRSAPI
+from cml_api import CrystalMathLabsAPI
 import time
 
-api = TempleOSRSAPI()
+api = CrystalMathLabsAPI()
 
-KBD_COMPETITION_ID = 2394
+RC_COMPETITION_ID = 27821
 
 def main():
-    api.update_players(KBD_COMPETITION_ID)
+    api.update_players(RC_COMPETITION_ID)
 
 if __name__ == "__main__":
     while True:
