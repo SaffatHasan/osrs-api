@@ -3,7 +3,7 @@ import time
 
 api = CrystalMathLabsAPI()
 
-RC_COMPETITION_ID = 27821
+RC_COMPETITION_ID = 27915
 
 def main():
     api.update_players(RC_COMPETITION_ID)
