@@ -1,7 +1,9 @@
 from abc import ABC
 from bs4 import BeautifulSoup
+from datetime import datetime
 from multiprocessing import Pool
 import requests
+import time
 
 
 class AbstractAPI(ABC):
@@ -14,10 +16,16 @@ class AbstractAPI(ABC):
 
     def update_players(self, competition_id) -> None:
         names = list(self.get_players(competition_id))
+        start = time.time()
+        current_time = datetime.now().strftime('%H:%M:%S')
+        print(f"Started update at {current_time}")
 
         with Pool(len(names)) as p:
             p.map(self.update_player_xp, names)
-        print("Finished updating everyone!")
+        end = time.time()
+        elapsed = time.time() - start
+        elapsed = time.strftime("%M:%S", time.gmtime(elapsed))
+        print(f"Finished updating everyone after {elapsed}!")
         print(
             f"See the competition here: {self.get_competition_url(competition_id)}"
         )
