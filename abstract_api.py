@@ -59,6 +59,4 @@ class AbstractAPI(ABC):
     def update_player_xp(self, name):
         if name.lower() == 'pvm fidoz':
             return
-        print(f"Updating {name}...")
         requests.get(self.update_player_base_url.format(name=name))
-        print(f"{name} finished.")
