@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from cml_api import CrystalMathLabsAPI
 import time
 
