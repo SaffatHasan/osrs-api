@@ -7,6 +7,7 @@ TEMPLE_CELL_SELECTOR = ".participant-row"
 
 
 class TempleOSRSAPI(AbstractAPI):
+    identifier = 'temple'
     def __init__(self):
         super().__init__(TEMPLE_BASE_URL, TEMPLE_UPDATE_PLAYER_BASE_URL,
                          TEMPLE_COMPETITION_URL, TEMPLE_CELL_SELECTOR)
