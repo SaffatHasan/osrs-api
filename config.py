@@ -1,8 +1,11 @@
 import yaml
 from cml_api import CrystalMathLabsAPI
 from temple_api import TempleOSRSAPI
+import os
 
-DEFAULT_CONFIG_PATH="config.yml"
+current_path = os.path.dirname(__file__)
+
+DEFAULT_CONFIG_PATH = os.path.join(current_path, "config.yml")
 
 class APIConfig:
     def __init__(self):
