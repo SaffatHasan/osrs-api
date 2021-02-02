@@ -6,3 +6,5 @@
   - Website
   - Competition ID
   - Poll frequency
+- Use poetry as dependency manager
+- Determine time left in competition to cap number of iterations
