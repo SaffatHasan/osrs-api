@@ -15,7 +15,7 @@ def update():
     api.update_players(competition_id)
 
 def wait():
-    num_sec = config.sleep_duration
+    num_sec = config.get_sleep_duration()
     print(f"Sleeping for {num_sec}s...")
     time.sleep(num_sec)
 

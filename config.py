@@ -27,5 +27,8 @@ class APIConfig:
     def get_competition(self):
         return self.config['competition']
 
+    def get_sleep_duration(self):
+        return self.config['sleep_duration']
+
 
 
