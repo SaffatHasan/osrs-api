@@ -65,4 +65,9 @@ class AbstractAPI(ABC):
         return self.competition_base_url.format(competition_id=competition_id)
 
     def update_player_xp(self, name):
+        name = self.sanitize_name(name)
+        print(f"Calling {self.update_player_base_url.format(name=name)}")
         requests.get(self.update_player_base_url.format(name=name))
+
+    def sanitize_name(self, name):
+        return name.replace(' ', '%20')
