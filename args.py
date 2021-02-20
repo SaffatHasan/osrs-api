@@ -5,7 +5,7 @@ from temple_api import TempleOSRSAPI
 def parse_args(args):
     parser = argparse.ArgumentParser()
     parser.add_argument('-i', '--competition-id', help='Competition ID', required=True, type=int)
-    parser.add_argument('-s', '--sleep-duration', help='How many seconds to wait between updates', required=False, default=60, type=int)
+    parser.add_argument('-s', '--sleep-duration', help='How many seconds to wait between updates', required=False, default=3600, type=int)
 
     competition_type_parser = parser.add_mutually_exclusive_group(required=False)
 
