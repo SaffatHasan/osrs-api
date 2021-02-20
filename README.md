@@ -1,3 +1,10 @@
+# osrs-api
+
+Used to automatically update player status during a competition. Please use responsibly.
+
+## Demo
+
+[![DEMO VIDEO](http://img.youtube.com/vi/MX8Z7HaDTKw/0.jpg)](http://www.youtube.com/watch?v=MX8Z7HaDTKw "OSRS Automatically Update Competition")
 ## TODO
 
 - Use a logger instead of print()
