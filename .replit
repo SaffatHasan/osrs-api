@@ -1,2 +1,2 @@
 language = "python3"
-run = "python3 main.py --competition-id 4872"
+run = "python3 main.py --competition-id 5305"
