@@ -7,6 +7,8 @@ import time
 
 
 class AbstractAPI(ABC):
+    MAX_THREADS = 10
+
     def __init__(self, base_url, update_player_base_url, competition_base_url,
                  cell_selector):
         self.base_url = base_url
@@ -20,7 +22,7 @@ class AbstractAPI(ABC):
         current_time = datetime.now().strftime('%H:%M:%S')
         print(f"Started update at {current_time}")
 
-        with Pool(len(names)) as p:
+        with Pool(self.MAX_THREADS) as p:
             p.map(self.update_player_xp, names)
         end = time.time()
         elapsed = time.time() - start
